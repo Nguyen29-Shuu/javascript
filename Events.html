@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="test" onload="alert('Đã tải xong')">
+    <button onclick="this.innerHTML=Date()">Nhấn vào đây</button></br></br>
+    <input type="text" name="name" id="name" value="Nguyen" onchange="alert('bạn vừa thây đổi giá trị')">
+    <button>Nhấn vào đây</button>
+    <div style="width: 200px; height: 100px; border: 1px solid black;"
+        onmouseout="this.style.backgroundColor='white',document.getElementById('test').style.backgroundColor='white',
+        this.innerHTML='Tha chuội vào đây'" 
+        onmouseover="this.style.backgroundColor='green',document.getElementById('test').style.backgroundColor='yellow'
+        this.innerHTML='Di chuyen chuot ra khỏi ô này'">
+        Tha chuội vào đây
+    </div>
+    <br>
+    <input type="text" onkeydown="alert('Bạn gõ phím')">
+</body>
+</html>
