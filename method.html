@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hoc method</title>
+</head>
+<body>
+    <h1>Hoc method</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const person={
+        name:"Nguyen",
+        sex:"nam",
+        height:"1m69",
+        tt:"Fa",
+        daHoc:{
+            school1:"Truong tieu hoc Ninh Thuy",
+            school2:"Truong THCS Nguyen Trung Truc",
+            school3:"Truong THPT Tran Quy Cap",
+        },
+        dangHoc:"UTH",
+        bd:"Shuu"
+        }
+        person.a=function(){
+            // return this.name+" '"+this.bd+"'";
+            return (this.name+" '"+this.bd+"'").toUpperCase();
+        }
+        document.getElementById("demo").innerHTML="Toi ten la "+person.a();
+    </script>
+</body>
+</html>

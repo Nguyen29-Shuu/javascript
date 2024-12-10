@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hoc Properties</title>
+</head>
+<body>
+    <h1>Hoc Properties</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const person={
+        name:"Nguyen",
+        sex:"nam",
+        height:"1m69",
+        tt:"Fa",
+        daHoc:{
+            school1:"Truong tieu hoc Ninh Thuy",
+            school2:"Truong THCS Nguyen Trung Truc",
+            school3:"Truong THPT Tran Quy Cap",
+        },
+        dangHoc:"UTH"
+        }
+        person.qq="Khanh Hoa";//Them thuoc tinh
+        document.getElementById("demo").innerHTML="Toi ten la "+person.name
+    +" gioi tinh "+person.sex+" cao "+person.height+" hien dang "+person.tt;
+        delete person.height;//xoa
+        document.getElementById("demo1").innerHTML="Toi ten la "+person.name
+        +" gioi tinh "+person.sex+" cao "+person.height+" hien dang "+person.tt;
+        document.getElementById("demo2").innerHTML="Da hoc o cac truong "+person.daHoc.school1+","+
+        person.daHoc.school2+" va "+person.daHoc.school3+". Hien tai dang hoc o truong "+" UTH";
+    </script>
+</body>
+</html>
