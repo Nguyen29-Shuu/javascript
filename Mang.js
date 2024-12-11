@@ -61,6 +61,56 @@ console.log("cắt mảng");
 console.log(traicay.slice(1).toString());
 console.log(traicay.slice(1,3).toString());
 //
+console.log("\n");
+console.log("Sắp xếp");
+const a=[51,61,29,99,1,5,3,2,8];
+a.sort(function(a,b){return a-b});
+console.log(a.toString());
+for(let i=a.length-1;i>0;i--)
+{
+    let j=Math.floor(Math.random()*(i+1));
+    let k=a[i];
+    a[i]=a[j];
+    a[j]=k;
+}
+console.log(a.toString());
+//số nhỏ nhất
+console.log(Math.min.apply(null,a));
+console.log(Math.max.apply(null,a));
+const pepelo=[
+    {name:"B",age:12},
+    {name:"A",age:51},
+    {name:"C",age:9},
+    {name:"J",age:11},
+    {name:"E",age:2}
+]
+pepelo.sort(function(a,b){
+    let x=a.name.toLowerCase();
+    let y=b.name.toLowerCase();
+    if(x>y){return 1;};
+    if(y>x){return -1;};
+    return 0;
+});
+display(pepelo);
+pepelo.sort(function(a,b){
+    let x=a.age;
+    let y=b.age;
+    if(x>y){return 1;};
+    if(y>x){return -1;};
+    return 0;
+});
+console.log();
+display(pepelo);
+function display(a) {
+    for (let i = 0; i < a.length; i++) {
+        console.log(a[i].name + " " + a[i].age);
+    }
+}
+console.log();
+let f=traicay.entries();
+for(let x of f){
+    console.log(x);
+}
 
 
 
