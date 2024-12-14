@@ -9,20 +9,43 @@
     <p id="demo1"></p>
     <p id="demo2"></p>
     <script>
-        function sum(x,y){
-            return x+y;
+        // function sum(x,y){
+        //     return x+y;
+        // }
+        // let a=sum(2,9);
+        // let txt="Tong:"+a;
+        // document.getElementById("demo").innerHTML=txt;
+        // let n=typeof ten;
+        // document.getElementById("demo1").innerHTML=n;
+        // function inTen(){
+        //     let ten="Doan Cong Nguyen";
+        //     let n=typeof ten+" "+ten;
+        //     document.getElementById("demo2").innerHTML=n;
+        // }
+        // inTen();
+        const person={
+            fname:"Nguyen",
+            lname:"Doan",
+            age:20,
+            live:"Khanh Hoa",
+            set lang(lang){
+                return this.language=lang;
+            },
+            get fullname(){
+                return this.fname+" "+this.lname;
+            }
         }
-        let a=sum(2,9);
-        let txt="Tong:"+a;
+        const person1={
+            fname:"Shuu",
+            lname:"Kafka"
+        }
+        let txt="";
+        person.lang="VN";
+        Object.assign(person,person1);
+        for(let[x,y] of Object.entries(person)){
+            txt+=x+" "+y+"</br>";
+        }
         document.getElementById("demo").innerHTML=txt;
-        let n=typeof ten;
-        document.getElementById("demo1").innerHTML=n;
-        function inTen(){
-            let ten="Doan Cong Nguyen";
-            let n=typeof ten+" "+ten;
-            document.getElementById("demo2").innerHTML=n;
-        }
-        inTen();
     </script>
 </body>
 </html>
